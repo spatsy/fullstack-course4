@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Media Queries</title>
+  <style>
+    /********** Base styles **********/
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      border: 1px solid black;
+      margin-bottom: 15px;
+    }
+
+    #p1 {
+      background-color: #b0b0b0;
+      width: 300px;
+      height: 300px;
+      text-align: justify;
+      padding: 0px 20px;
+    }
+
+    #p2 {
+      background-color: #7e7e7e;
+      width: 50px;
+      height: 50px;
+      overflow: auto;
+      /* this adds the scroll button to the box and keeps the text from overflowing*/
+    }
+
+    /********** Large devices only **********/
+    @media (min-width: 1200px) {
+      #p1 {
+        width: 80%;
+      }
+
+      #p2 {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    /********** Medium devices only **********/
+    @media (min-width: 992px) AND (max-width: 1199px) {
+      #p1 {
+        width: 50%
+      }
+
+      #p2 {
+        width: 100px;
+        height: 100px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Media Queries</h1>
+
+  <p id="p1">What the code on line 31 means is that if the screen is over 1200px, the box will take up 80% of the screen
+    (left to right). Once it hits 1199px, it will take up 50% of the screen. Line 43 is where that code lives.</p>
+  <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero officia quas quos quasi! Quidem, nesciunt
+    odio! Earum sapiente asperiores facilis nemo consequuntur. Eligendi, quisquam iste dolore maiores ipsa provident
+    modi.</p>
+
+</body>
+
+</html>
